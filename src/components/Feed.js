@@ -1,20 +1,49 @@
 import React, { useState } from 'react'
 import pay from '../images/pay.png'
+import icon from '../icons/Icon.png'
+import Nclock from '../icons/nclock.png'
+import clock from '../icons/clock.png'
+import ads from '../icons/ads.png'
+import book from '../icons/book.png'
+import live from '../icons/live.png'
 function Feed() {
   const [selectedOption, setSelectedOption] = useState('option2');
-
+  const [value, setValue] = useState(179)
+  const limitedOffer = 18500 - value
   const handleOptionChange = (event) => {
+    const value = event.target.value;
     setSelectedOption(event.target.value);
+    switch (value) {
+      case 'option2':
+        setValue(179);
+        break;
+      case 'option3':
+        setValue(149);
+        break;
+      case 'option4':
+        setValue(99);
+        break;
+      default:
+        break;
+    }
   };
 
   return (
-    <div className="w-full flex px-20 justify-between pt-4" >
-      <div className='w-40% text-white'>
+    <div className="w-full flex px-20  justify-between pt-4" >
+      <div className='w-40% text-white mt-4'>
         <h1 className='text-4xl font-relway font-semibold'>Access curated courses worth </h1>
-        <h1 className='text-4xl font-relway font-semibold line-through decoration-red-600'>Access curated courses worth</h1>
-
+        <h1 className='text-4xl items-center font-relway font-semibold mb-6'>₹ <span className='line-through decoration-red-600 font-extrabold mr-1'>18,500 </span>
+          at just <span className='text-[#0096FF]'>₹99</span> per year!
+        </h1>
+        <div className='space-y-6 '>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={book} className='w-8 mr-10' /> <span className='text-[#0096FF]'>100+</span> Job relevant courses </h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={clock} className='w-8 mr-10' /> <span className='text-[#0096FF]'>20,000+</span> Hours of content</h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={live} className='w-8 mr-10' /> <span className='text-[#0096FF]'>Exclusive</span> webinar access</h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={icon} className='w-8 mr-10' /> Scholarship worth <span className='text-[#0096FF]'> ₹94,500</span></h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={ads} className='w-8 mr-10' /> <span className='text-[#0096FF]'>Ad Free </span> learning experience</h1>
+        </div>
       </div>
-      <div className='w-50% text-black'>
+      <div className='w-50%  items-center text-black'>
 
         <form action="#" className='bg-white rounded-lg space-y-2 py-4 px-6'>
           <div className='flex justify-around font-roboto px-4 text-sm'>
@@ -116,14 +145,17 @@ function Feed() {
             <span className='flex justify-between font-semibold text-[#DE4313]'>
               Limited time offer
               <span className='text-slate-600'>
-                - ₹18,401
+                - ₹{limitedOffer}
               </span>
             </span>
-            <h1 className='text-[#DE4313] text-[13px]'>Offer valid till 25th March 2023 </h1>
+            <span className='flex items-center'>
+              <img src={Nclock} className='h-4 mr-2 text-[#DE4313]' />
+              <h1 className='text-[#DE4313] text-[13px]'> Offer valid till 25th March 2023 </h1>
+            </span>
           </div>
           <div className='px-6 flex justify-between'>
             <h1 className='text-[14px]'><span className='font-semibold'>Total</span> (Incl. of 18% GST)</h1>
-            <h1 className='text-[15px] font-semibold'>₹149</h1>
+            <h1 className='text-[15px] font-semibold'>₹{value}</h1>
           </div>
           <div className='flex gap-3 justify-around'>
             <button className='upprecase w-[50%] py-2 border-2 rounded-md border-[#F77171]' >cancel</button>
