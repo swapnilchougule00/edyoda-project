@@ -36,11 +36,11 @@ function Feed() {
           at just <span className='text-[#0096FF]'>₹99</span> per year!
         </h1>
         <div className='space-y-6 '>
-          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={book} className='w-8 mr-10' /> <span className='text-[#0096FF]'>100+</span> Job relevant courses </h1>
-          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={clock} className='w-8 mr-10' /> <span className='text-[#0096FF]'>20,000+</span> Hours of content</h1>
-          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={live} className='w-8 mr-10' /> <span className='text-[#0096FF]'>Exclusive</span> webinar access</h1>
-          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={icon} className='w-8 mr-10' /> Scholarship worth <span className='text-[#0096FF]'> ₹94,500</span></h1>
-          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={ads} className='w-8 mr-10' /> <span className='text-[#0096FF]'>Ad Free </span> learning experience</h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={book} alt='img' className='w-8 mr-10' /> <span className='text-[#0096FF]'>100+</span> Job relevant courses </h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={clock} alt='img' className='w-8 mr-10' /> <span className='text-[#0096FF]'>20,000+</span> Hours of content</h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={live} alt='img' className='w-8 mr-10' /> <span className='text-[#0096FF]'>Exclusive</span> webinar access</h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={icon} alt='img' className='w-8 mr-10' /> Scholarship worth <span className='text-[#0096FF]'> ₹94,500</span></h1>
+          <h1 className='flex text-xl gap-2 font-roboto tracking-wide'><img src={ads} alt='img' className='w-8 mr-10' /> <span className='text-[#0096FF]'>Ad Free </span> learning experience</h1>
         </div>
       </div>
       <div className='w-50%  items-center text-black'>
