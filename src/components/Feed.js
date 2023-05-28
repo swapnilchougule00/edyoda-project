@@ -149,7 +149,7 @@ function Feed() {
               </span>
             </span>
             <span className='flex items-center'>
-              <img src={Nclock} className='h-4 mr-2 text-[#DE4313]' />
+              <img src={Nclock} alt='img' className='h-4 mr-2 text-[#DE4313]' />
               <h1 className='text-[#DE4313] text-[13px]'> Offer valid till 25th March 2023 </h1>
             </span>
           </div>
